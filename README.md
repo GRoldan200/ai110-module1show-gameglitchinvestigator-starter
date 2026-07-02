@@ -35,7 +35,7 @@ It wrote the code, ran away, and now the game is unplayable.
 - [ ] Explain what fixes you applied.
    1. I switched where the "Too Low", "📉 Go LOWER!" and "Too High", "📈 Go HIGHER!" locations. It gives the user accurate assessment of where the guesses.
    2. Within the parse_guess method I inserted code that dynamically enters the lowest and highest number of the number range given for a difficulty level. Finally I had the program guess counter up by 1 if the guess is a valid integer within the given number range.
-   3. 
+   3. Changed the st.session_state.attempts to equal 0 instead of 1.
 
 ## 📸 Demo Walkthrough
 
