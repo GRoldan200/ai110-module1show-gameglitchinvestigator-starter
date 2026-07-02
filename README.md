@@ -26,8 +26,16 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+   1. The user is tasked to guess a number from a range of 1-100. There are 3 modes: easy, normal, and hard. Each mode has different amount of guesses the user can make. With every guess made within alloted amount of tries the user is given a hint whether to go higher or lower. Once the user guesses the number correctly they are told they have won and can try the game again.
 - [ ] Detail which bugs you found.
+   1. The hint given to go higher or lower is incorrect. The hint is telling the user to guess the opposite way. For example if the number is 50 and the user guesses 40 the program tells the user to guess lower. It should be guess higher.
+   2. The user is able to guess any non-whole number outside of the range 1-100.
+   3. Each difficulty level shows the user 1 less attempt than they should have. For example normal diffculty should have 8 guesses, but the program only allows 7 guesses.
+   4. The user cannot restart the program after the game is won or lose by clicking the "New Game" button. Instead, the program freezes, forcing the user to manually restart the program.
 - [ ] Explain what fixes you applied.
+   1. I switched where the "Too Low", "📉 Go LOWER!" and "Too High", "📈 Go HIGHER!" locations. It gives the user accurate assessment of where the guesses.
+   2. Within the parse_guess method I inserted code that dynamically enters the lowest and highest number of the number range given for a difficulty level. Finally I had the program guess counter up by 1 if the guess is a valid integer within the given number range.
+   3. 
 
 ## 📸 Demo Walkthrough
 
