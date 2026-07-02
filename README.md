@@ -38,7 +38,7 @@ It wrote the code, ran away, and now the game is unplayable.
    2. Within the parse_guess method I inserted code that dynamically enters the lowest and highest number of the number range given for a difficulty level. Finally I had the program guess counter up by 1 if the guess is a valid integer within the given number range.
    3. Changed the st.session_state.attempts to equal 0 instead of 1.
    4. Added st.session_state.status = "playing" and st.session_state.history = [] to correctly restart the program when the user clicks on "New Game 🔁."
-   5.
+   5. I had the program register the Enter keystroke.
 
 ## 📸 Demo Walkthrough
 
