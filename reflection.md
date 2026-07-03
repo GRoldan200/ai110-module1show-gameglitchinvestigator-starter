@@ -5,8 +5,11 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+The header was "🎮 Game Glitch Investigator. An AI-generated guessing game. Something is off." The left side gives the user a choice of difficulty to choose from. They are easy, normal, and hard with normal difficulty being the defaulty setting. There is also a Developer Debug Info box to show us the developer the secret number, attempts made, score, and history of guesses. At the bottom is space to enter your guess. Underneath that is New Game button, Submut Guess button, and Show hint button which is turned on by default.
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
+  1. User can input non-integers and numbers outside of the described range.
+  2. The New Game button did not work.
 
 **Bug Reproduction Log**
 
@@ -23,6 +26,7 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+Claude. Specifically the Haiku model. 
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 

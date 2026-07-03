@@ -40,16 +40,13 @@ def check_guess(guess, secret):
         return "Win", "🎉 Correct!"
 
     try:
+        if isinstance(secret, str):
+            secret = int(secret)
         if guess > secret:
             return "Too Low", "📉 Go LOWER!"
         else:
             return "Too High", "📈 Go HIGHER!"
-    except TypeError:
-        g = str(guess)
-        if g == secret:
-            return "Win", "🎉 Correct!"
-        if g > secret:
-            return "Too Low", "📉 Go LOWER!"
+    except (TypeError, ValueError):
         return "Too High", "📈 Go HIGHER!"
 
 
@@ -142,6 +139,7 @@ if new_game:
     st.session_state.secret = random.randint(low, high)
     st.session_state.status = "playing"
     st.session_state.history = []
+    st.session_state.score = 0
     st.success("New game started.")
     st.rerun()
 
